@@ -21,7 +21,7 @@ Say (Silent: False) > Hello world.
 
 In [5]: voice_controller.load_voice(PicoTTS)
 
-In [6]: voice_controller.generate_file(destiny_path="hello.wav", text="Hello world")
+In [6]: voice_controller.generate_file(destiny_path="picotts_hello.wav", text="Hello world")
 Out[6]: CompletedProcess(
     args='pico2wave   --lang en-US --wave hello.wav "hello world"', returncode=0
     )
@@ -33,7 +33,7 @@ In [8]: voice_controller.say("Hello world.")
 Say (Silent: False) > Hello world.
 /bin/sh: 1: Syntax error: Unterminated quoted string
 
-In [9]: voice_controller.generate_file(destiny_path="hello.wav", text="Hello world")
+In [9]: voice_controller.generate_file(destiny_path="espeak_hello.wav", text="Hello world")
 Out[9]: CompletedProcess(
     args='espeak -v en  -p 30 -a 200 -w hello.wav "Hello world"',
     returncode=0
